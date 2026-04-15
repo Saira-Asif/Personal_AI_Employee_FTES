@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(type:*)",
+      "Bash(python:*)",
+      "FileRead",
+      "FileWrite",
+      "DirRead",
+      "DirCreate",
+      "FileCreate"
+    ],
+    "deny": []
+  }
+}

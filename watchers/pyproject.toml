@@ -1,0 +1,39 @@
+[project]
+name = "ai-employee-watchers"
+version = "0.1.0"
+description = "Personal AI Employee - Watcher scripts for monitoring inputs"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "watchdog>=6.0.0",
+]
+
+[project.scripts]
+fs-watcher = "filesystem_watcher:main"
+
+[project.optional-dependencies]
+gmail = [
+    "google-auth>=2.0.0",
+    "google-auth-oauthlib>=1.0.0",
+    "google-api-python-client>=2.0.0",
+]
+whatsapp = [
+    "playwright>=1.40.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+    "ruff>=0.1.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]

@@ -1,0 +1,9 @@
+Please create a weekly CEO briefing summary for this week.
+
+Include:
+1. Revenue earned this week
+2. Tasks completed vs pending
+3. Any cost optimization suggestions (unused subscriptions, etc.)
+4. Upcoming deadlines and bottlenecks
+
+Reference the Business_Goals.md and Accounting/2026-04/transactions.md for data.

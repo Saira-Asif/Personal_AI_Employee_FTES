@@ -1,0 +1,40 @@
+# AI Employee Watchers
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.local
+credentials.json
+*.log
+.pid
+
+# Vault secrets
+AI_Employee_Vault/.env
+AI_Employee_Vault/credentials/
+AI_Employee_Vault/secrets/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+*.egg-info/
+*.egg
+.venv/
+venv/
+env/
+
+# uv
+.uv/
+
+# IDE
+.vscode/
+.idea/
+
+# Node (for future MCP servers)
+node_modules/
+
+# Temporary files
+*.tmp
+*.bak

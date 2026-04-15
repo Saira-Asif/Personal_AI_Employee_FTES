@@ -1,0 +1,49 @@
+{
+  "_comment": "MCP Server Configuration - Silver Tier+",
+  "_status": "Placeholder for future MCP server integration",
+  "_docs": "https://platform.claude.com/docs/en/agents-and-tools/mcp",
+  "servers": [
+    {
+      "name": "email-mcp",
+      "status": "not_installed",
+      "tier": "silver",
+      "description": "Send, draft, and search emails via Gmail API",
+      "setup_guide": "See Silver Tier documentation for email MCP setup",
+      "config": {
+        "command": "node",
+        "args": [],
+        "env": {
+          "GMAIL_CREDENTIALS": "${VAULT_PATH}/credentials/gmail.json"
+        }
+      }
+    },
+    {
+      "name": "browser-mcp",
+      "status": "not_installed",
+      "tier": "silver",
+      "description": "Browser automation for payments and web actions",
+      "setup_guide": "See Silver Tier documentation for browser MCP setup",
+      "config": {
+        "command": "npx",
+        "args": ["@anthropic/browser-mcp"],
+        "env": {
+          "HEADLESS": "true"
+        }
+      }
+    },
+    {
+      "name": "calendar-mcp",
+      "status": "not_installed",
+      "tier": "silver",
+      "description": "Create and manage calendar events",
+      "setup_guide": "See Silver Tier documentation for calendar MCP setup"
+    },
+    {
+      "name": "slack-mcp",
+      "status": "not_installed",
+      "tier": "silver",
+      "description": "Send messages and read channels in Slack",
+      "setup_guide": "See Silver Tier documentation for Slack MCP setup"
+    }
+  ]
+}
