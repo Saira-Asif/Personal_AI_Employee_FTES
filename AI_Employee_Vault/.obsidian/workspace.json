@@ -185,6 +185,9 @@
   },
   "active": "fd9e1613a7589538",
   "lastOpenFiles": [
+    "Logs/gemini_20260516_182207.log",
+    "Plans/PLAN_process_file_20260516_182207.md",
+    "Needs_Action/FILE_20260516_182149_silver_tier_test.md",
     "Logs/gemini_20260516_165006.log",
     "Active_Project/TASK_email_review_20260516_164936.md",
     "Active_Project/TASK_email_review_20260516_164906.md",
@@ -216,10 +219,7 @@
     "Active_Project/TASK_email_review_20260514_193741.md",
     "Business_Goals.md",
     "Logs/gemini_20260514_193811.log",
-    "Logs/gemini_20260514_193741.log",
     "Needs_Action/TASK_email_review_20260514_193741.md",
-    "Needs_Action/EMAIL_19e1e630df3f6feb.md",
-    "Plans/PLAN_process_file_20260513_173652.md",
-    "Plans/PLAN_process_file_20260513_175705.md"
+    "Needs_Action/EMAIL_19e1e630df3f6feb.md"
   ]
 }
