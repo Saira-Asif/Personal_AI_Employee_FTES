@@ -87,9 +87,17 @@ Personal_AI_Employee_FTES/
 │   └── requirements.txt              # Python dependencies
 ├── skills/                           # Qwen Code agent skills
 │   ├── vault-processor/
-│   │   └── SKILL.md                  # Process vault items
-│   └── daily-briefing/
-│       └── SKILL.md                  # Generate daily/weekly reports
+│   │   └── SKILL.md                  # Process vault items (Bronze)
+│   ├── daily-briefing/
+│   │   └── SKILL.md                  # Generate briefings (Bronze)
+│   ├── email-handler/
+│   │   └── SKILL.md                  # Gmail integration (Silver)
+│   ├── mcp-action-executor/
+│   │   └── SKILL.md                  # MCP server actions (Silver)
+│   ├── scheduler-trigger/
+│   │   └── SKILL.md                  # Cron/Task Scheduler (Silver)
+│   └── hitl-manager/
+│       └── SKILL.md                  # Approval workflow (Silver)
 ├── mcp-servers/                      # MCP server configs (Silver+)
 │   ├── mcp-config.json               # Server configuration templates
 │   └── README.md                     # MCP setup guide
@@ -120,11 +128,19 @@ Personal_AI_Employee_FTES/
 - **filesystem_watcher.py** - Monitors Inbox/ using watchdog library, creates action files in Needs_Action/
 
 ### 2. Orchestrator (Coordination Layer)
-- **orchestrator.py** - Coordinates watchers, generates Claude prompts, manages task lifecycle (pending → in_progress → complete), auto-updates Dashboard
+- **orchestrator.py** - Coordinates watchers, generates Qwen prompts, manages task lifecycle (pending → in_progress → complete), auto-updates Dashboard
 
 ### 3. Agent Skills (Reasoning Layer)
+
+**Bronze Tier:**
 - **vault-processor** - Processes items from Needs_Action, creates plans, executes work, manages the full workflow
 - **daily-briefing** - Generates daily summaries and weekly "Monday Morning CEO Briefing" reports
+
+**Silver Tier:**
+- **email-handler** - Monitors Gmail, classifies emails by priority, drafts replies, manages HITL before sending
+- **mcp-action-executor** - Executes external actions via MCP servers (email, browser, calendar, WhatsApp, payments, social)
+- **scheduler-trigger** - Handles cron/Task Scheduler operations (daily briefings, morning check-ins, email polling)
+- **hitl-manager** - Manages approvals: creates requests, escalates stale items, auto-approves safe recurring actions
 
 ### 4. Vault (Memory/GUI Layer)
 - **Dashboard.md** - Real-time metrics, task counts, system status

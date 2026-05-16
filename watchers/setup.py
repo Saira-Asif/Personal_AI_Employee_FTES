@@ -49,6 +49,8 @@ def test_imports():
     tests = [
         ("base_watcher", "BaseWatcher"),
         ("filesystem_watcher", "FileSystemWatcher"),
+        ("gmail_watcher", "GmailWatcher"),
+        ("linkedin_watcher", "LinkedInWatcher"),
         ("orchestrator", "Orchestrator"),
     ]
     
@@ -58,7 +60,7 @@ def test_imports():
             mod = __import__(module)
             cls = getattr(mod, class_name)
             print(f"  {module}.{class_name} - OK")
-        except ImportError as e:
+        except Exception as e:
             print(f"  {module}.{class_name} - FAILED: {e}")
             all_passed = False
     
@@ -115,7 +117,13 @@ def test_skills():
     print("\nTesting skills...")
     
     skills_path = Path(__file__).parent.parent / "skills"
-    expected_skills = ["vault-processor", "daily-briefing"]
+    expected_skills = [
+        "vault-processor", 
+        "daily-briefing",
+        "email-handler",
+        "linkedin-handler",
+        "hitl-manager"
+    ]
     
     all_passed = True
     for skill in expected_skills:
@@ -143,10 +151,19 @@ def main():
     # Always install dependencies
     install_dependencies()
     
+    # Playwright browser install
+    print("\nInstalling Playwright Chromium...")
+    try:
+        subprocess.check_call([sys.executable, "-m", "playwright", "install", "chromium"])
+        print("Playwright Chromium installed successfully")
+    except Exception as e:
+        print(f"WARNING: Playwright install failed: {e}")
+        print("You may need to run 'python -m playwright install chromium' manually")
+
     if parser:
         # Run validation tests
         print("\n" + "=" * 50)
-        print("Running Bronze Tier Validation")
+        print("Running Silver Tier Validation")
         print("=" * 50)
         
         results = {
@@ -156,7 +173,7 @@ def main():
         }
         
         print("\n" + "=" * 50)
-        print("Bronze Tier Validation Results")
+        print("Silver Tier Validation Results")
         print("=" * 50)
         
         all_passed = True
@@ -168,9 +185,9 @@ def main():
         
         print("=" * 50)
         if all_passed:
-            print("Bronze Tier: ALL CHECKS PASSED")
+            print("Silver Tier: ALL CHECKS PASSED")
         else:
-            print("Bronze Tier: SOME CHECKS FAILED")
+            print("Silver Tier: SOME CHECKS FAILED")
             print("Review the output above and fix issues.")
         print("=" * 50)
         
@@ -179,8 +196,8 @@ def main():
         print("\nSetup complete!")
         print("\nNext steps:")
         print("1. Open AI_Employee_Vault in Obsidian")
-        print("2. Run: python orchestrator.py ../AI_Employee_Vault")
-        print("3. Drop files into AI_Employee_Vault/Inbox/ to test")
+        print("2. Run: python orchestrator.py ../AI_Employee_Vault --watchers fs gmail linkedin")
+        print("3. Check Needs_Action/ for new items from Gmail/LinkedIn")
         print("\nFor validation, run: python setup.py --test")
         return 0
 

@@ -285,6 +285,16 @@ def test_skills_structure(results: TestResult):
             "Daily Briefing",
             "Weekly CEO Briefing",
         ],
+        "email-handler": [
+            "When to Use",
+            "Workflow",
+            "Approval Before Sending",
+        ],
+        "linkedin-handler": [
+            "When to Use",
+            "Workflow",
+            "Automated Business Posting",
+        ],
     }
     
     for skill_name, required_sections in expected_skills.items():
@@ -323,6 +333,8 @@ def test_python_modules(results: TestResult):
     imports = [
         ("base_watcher", "BaseWatcher"),
         ("filesystem_watcher", "FileSystemWatcher", "DropFolderHandler"),
+        ("gmail_watcher", "GmailWatcher"),
+        ("linkedin_watcher", "LinkedInWatcher"),
         ("orchestrator", "Orchestrator"),
     ]
     
@@ -464,10 +476,10 @@ def test_templates(vault_path: Path, results: TestResult):
 
 
 def main():
-    """Run all Bronze Tier validation tests."""
+    """Run all Silver Tier validation tests."""
     import argparse
     
-    parser = argparse.ArgumentParser(description="Bronze Tier End-to-End Validation")
+    parser = argparse.ArgumentParser(description="Silver Tier End-to-End Validation")
     parser.add_argument(
         "--vault-path",
         help="Path to the AI Employee Vault (default: auto-detect)",
@@ -485,9 +497,9 @@ def main():
         sys.exit(1)
     
     print("=" * 50)
-    print("Bronze Tier End-to-End Validation")
+    print("Silver Tier End-to-End Validation")
     print(f"Vault: {vault_path}")
-    print(f"Tests: 36 checks across 9 categories")
+    print(f"Tests: Validating watchers, skills, and orchestrator")
     print("=" * 50)
     
     results = TestResult()
@@ -511,13 +523,13 @@ def main():
     all_passed = results.summary()
     
     if all_passed:
-        print("\nBronze Tier: FULLY VALIDATED")
+        print("\nSilver Tier: FULLY VALIDATED")
         print("\nYour AI Employee is ready for:")
         print("  - Opening in Obsidian")
-        print("  - Running the orchestrator: python orchestrator.py ../AI_Employee_Vault")
-        print("  - Processing files dropped into Inbox/")
+        print("  - Running the orchestrator: python orchestrator.py ../AI_Employee_Vault --watchers fs gmail linkedin")
+        print("  - Automated Gmail and LinkedIn monitoring")
     else:
-        print("\nBronze Tier: VALIDATION ISSUES FOUND")
+        print("\nSilver Tier: VALIDATION ISSUES FOUND")
         print("Review the failures above and fix them.")
     
     return 0 if all_passed else 1

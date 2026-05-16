@@ -12,13 +12,13 @@ review_frequency: weekly
 - **Quarterly Goal**: $30,000
 
 ## Key Metrics to Track
-| Metric | Target | Alert Threshold | Current |
-|--------|--------|-----------------|---------|
-| Client response time | < 24 hours | > 48 hours | - |
-| Invoice payment rate | > 90% | < 80% | - |
-| Software costs | < $500/month | > $600/month | - |
-| Tasks completed/week | 20 | < 10 | 0 |
-| New leads/week | 5 | < 2 | 0 |
+| Metric               | Target       | Alert Threshold | Current |
+| -------------------- | ------------ | --------------- | ------- |
+| Client response time | < 24 hours   | > 48 hours      | -       |
+| Invoice payment rate | > 90%        | < 80%           | -       |
+| Software costs       | < $500/month | > $600/month    | -       |
+| Tasks completed/week | 20           | < 10            | 0       |
+| New leads/week       | 5            | < 2             | 0       |
 
 ## Active Projects
 1. **Project Alpha** - Due Apr 30, 2026 - Budget $2,000

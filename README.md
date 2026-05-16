@@ -261,13 +261,27 @@ I need you to process this action file from my AI Employee vault.
 
 ## Agent Skills
 
-Two skills are included for Qwen Code:
+### Bronze Tier (Core)
 
-### vault-processor
-Processes items from the vault - reads from Needs_Action, creates plans, executes tasks, and manages the workflow lifecycle.
+#### vault-processor
+Processes items from the vault - reads from Needs_Action, creates plans, executes tasks, manages approvals, and coordinates with Silver tier skills.
 
-### daily-briefing
-Generates daily summaries and weekly "Monday Morning CEO Briefing" reports.
+#### daily-briefing
+Generates daily summaries, weekly "Monday Morning CEO Briefing" reports, and subscription audits. Includes audit logging, configurable thresholds, and system health monitoring.
+
+### Silver Tier (External Integration)
+
+#### email-handler
+Monitors Gmail inputs, classifies emails by priority, drafts intelligent replies, and manages approval before sending via Gmail MCP server.
+
+#### mcp-action-executor
+Executes external actions via MCP servers: email sending, browser automation, calendar management, WhatsApp messaging, payments, and social media posting. Enforces HITL approval gates and audit logging.
+
+#### scheduler-trigger
+Handles scheduled operations from cron/Task Scheduler: daily briefings, morning check-ins, weekly CEO reports, email polling, and subscription audits.
+
+#### hitl-manager
+Manages Human-in-the-Loop approvals: creates requests, notifies users, escalates stale items, auto-approves safe recurring actions, and maintains approval history.
 
 To use these skills, copy them into your Qwen Code skills directory or reference them when prompting Qwen.
 

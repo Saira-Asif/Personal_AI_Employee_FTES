@@ -236,6 +236,10 @@ class FileSystemWatcher:
         except KeyboardInterrupt:
             self.stop()
     
+    def run(self):
+        """Alias for start() to match BaseWatcher interface."""
+        self.start()
+
     def stop(self):
         """Stop watching."""
         self.running = False

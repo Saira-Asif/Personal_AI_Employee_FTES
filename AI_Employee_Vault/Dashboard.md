@@ -1,6 +1,6 @@
 ---
 type: dashboard
-last_updated: 2026-04-16T00:10:48.302307
+last_updated: 2026-05-16T16:50:06.600494
 status: active
 ---
 
@@ -13,8 +13,8 @@ status: active
 ## Key Metrics
 | Metric | Value | Status |
 |--------|-------|--------|
-| Pending Tasks | 1 | ✅ |
-| Tasks Completed Today | 1 | ✅ |
+| Pending Tasks | 7 | ✅ |
+| Tasks Completed Today | 0 | ✅ |
 | Tasks Completed This Week | 1 | ✅ |
 | Pending Approvals | 0 | ✅ |
 | Unread Messages | 0 | ✅ |
@@ -47,6 +47,8 @@ _No approvals required_
 | Component | Status | Last Check |
 |-----------|--------|------------|
 | File System Watcher | ✅ Active | 2026-04-15 |
+| Gmail Watcher | ✅ Active | 2026-04-16 |
+| LinkedIn Watcher | ✅ Active | 2026-04-16 |
 | Qwen Code Integration | ✅ Active | Orchestrator generates prompts |
 | Vault Structure | ✅ Ready | 2026-04-10 |
 | Weekly Briefings | ✅ Active | Last: 2026-04-15 |

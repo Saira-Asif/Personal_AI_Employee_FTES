@@ -135,7 +135,7 @@ Generate comprehensive weekly report including:
 
 ### Graceful Degradation
 - If a watcher fails, continue with other functions
-- If Qwen Code is unavailable, watchers continue collecting data
+- If Gemini Code is unavailable, watchers continue collecting data
 - Always maintain data integrity over speed
 
 ## Continuous Improvement
