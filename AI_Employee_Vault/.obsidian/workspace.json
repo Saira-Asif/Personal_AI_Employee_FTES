@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active_Project/TASK_email_review_20260515_222130.md",
+                "file": "Plans/PLAN_process_file_20260516_182207.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TASK_email_review_20260515_222130"
+              "title": "PLAN_process_file_20260516_182207"
             }
           }
         ]
@@ -185,6 +185,17 @@
   },
   "active": "fd9e1613a7589538",
   "lastOpenFiles": [
+    "Active_Project/TASK_email_review_20260515_222130.md",
+    "Logs/gemini_20260516_210332.log",
+    "Active_Project/TASK_email_review_20260516_210302.md",
+    "Logs/gemini_20260516_210302.log",
+    "Needs_Action/TASK_email_review_20260516_210302.md",
+    "Needs_Action/EMAIL_19e318589721d97f.md",
+    "Logs/gemini_20260516_193408.log",
+    "Active_Project/TASK_email_review_20260516_193338.md",
+    "Logs/gemini_20260516_193338.log",
+    "Needs_Action/TASK_email_review_20260516_193338.md",
+    "Needs_Action/EMAIL_19e3134b24852332.md",
     "Logs/gemini_20260516_182207.log",
     "Plans/PLAN_process_file_20260516_182207.md",
     "Needs_Action/FILE_20260516_182149_silver_tier_test.md",
@@ -204,22 +215,10 @@
     "Active_Project/TASK_email_review_20260515_012945.md",
     "Needs_Action/EMAIL_19e26eaf988c307f.md",
     "Logs/gemini_20260515_222201.log",
-    "Active_Project/TASK_email_review_20260515_222130.md",
-    "Logs/gemini_20260515_222130.log",
     "Needs_Action/TASK_email_review_20260515_222130.md",
     "Needs_Action/EMAIL_19e29e90475dd94f.md",
     "Needs_Action/EMAIL_19e2a5777cfd39cd.md",
     "Needs_Action/EMAIL_19e2ac4bf3939e05.md",
-    "Needs_Action/EMAIL_19e2c0e99752e76a.md",
-    "Logs/gemini_20260515_222100.log",
-    "Needs_Action/TASK_email_review_20260515_222100.md",
-    "Logs/gemini_20260515_013015.log",
-    "Logs/gemini_20260515_012945.log",
-    "Needs_Action/TASK_email_review_20260515_012945.md",
-    "Active_Project/TASK_email_review_20260514_193741.md",
-    "Business_Goals.md",
-    "Logs/gemini_20260514_193811.log",
-    "Needs_Action/TASK_email_review_20260514_193741.md",
-    "Needs_Action/EMAIL_19e1e630df3f6feb.md"
+    "Needs_Action/EMAIL_19e2c0e99752e76a.md"
   ]
 }

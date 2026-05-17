@@ -6,6 +6,9 @@ __pycache__/
 .env.local
 credentials.json
 token.json
+linkedin_session.json
+.linkedin_browser_data/
+
 *.log
 .pid
 
